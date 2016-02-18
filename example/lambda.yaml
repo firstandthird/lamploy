@@ -1,2 +1,6 @@
 region: 'us-west-2'
-projectName: 'testFunc'
+projectName: 'exampleTest'
+defaultAliases:
+  - 'dev'
+  - 'stage'
+  - 'prod'

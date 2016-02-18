@@ -5,16 +5,16 @@ var async = require('async');
 var lamConfig = require('./lib/helpers/config');
 var bootstrap = require('./lib/helpers/bootstrap');
 
-module.exports = function(cwd, opts) {
+module.exports = function(cwd, opts, cb) {
+
+  if(!opts.log) {
+    opts.log = console.log;
+  }
+  
   async.waterfall([
-    function(done) {
-      lamConfig(cwd, function(err, data) {
-        if(err) {
-          console.log('lambda.yaml file not found. Please create this file to continue.');
-          done(err);
-        }
-        done(null, data);
-      });   
+    (done) => {
+      const confData = lamConfig(cwd);   
+      done(null, confData);
     },
     function(data, done) {
       opts.config = data;
@@ -23,13 +23,7 @@ module.exports = function(cwd, opts) {
         done(null);
       }); 
     }
-  ], function(err) {
-    if(err) {
-      console.log('Eeeerrrr', err);
-      return;
-    }  
-
-  });
+  ], cb);
 };
 
 
