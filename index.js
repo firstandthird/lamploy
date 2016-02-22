@@ -5,7 +5,7 @@ var async = require('async');
 var lamConfig = require('./lib/helpers/config');
 var bootstrap = require('./lib/helpers/bootstrap');
 
-module.exports = function(cwd, opts, cb) {
+module.exports = function(cwd, modPath, opts, cb) {
 
   if(!opts.log) {
     opts.log = console.log;
