@@ -1,0 +1,7 @@
+name: 'doTheOther'
+mainFile: 'index.js'
+conf:
+  Handler: 'index.handler'
+  Timeout: 10
+  Role: 'arn:aws:iam::275424596243:role/lambda_basic_execution'
+  Runtime: 'nodejs'
