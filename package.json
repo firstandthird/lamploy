@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "An AWS-SDK wrapper for deploying lambda functions",
   "main": "index.js",
+  "bin": {
+    "node-lambda": "./bin/node-lambda.js"
+  }
   "scripts": {
     "test": "test"
   },
