@@ -14,11 +14,14 @@ module.exports = function(cwd, modPath, opts, cb) {
   async.waterfall([
     (done) => {
       const confData = lamConfig(cwd);   
-      done(null, confData);
+      const pkgData = require(cwd +  '/package.json');
+
+      done(null, confData, pkgData);
     },
-    function(data, done) {
+    function(data, pkg, done) {
       opts.config = data;
       opts._cwd = cwd;
+      opts._pkg = pkg;
       bootstrap(opts, function(err, data) {
         done(null);
       }); 
