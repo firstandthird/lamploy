@@ -1,24 +1,24 @@
 {
-  "name": "node-lambda",
+  "name": "lamploy",
   "version": "0.1.0",
   "description": "An AWS-SDK wrapper for deploying lambda functions",
   "main": "index.js",
   "bin": {
-    "node-lambda": "./bin/node-lambda.js"
+    "lamploy": "./bin/lamploy.js"
   },
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firstandthird/node-lambda.git"
+    "url": "git+https://github.com/firstandthird/lamploy.git"
   },
   "author": "First and Third",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/firstandthird/node-lambda/issues"
+    "url": "https://github.com/firstandthird/lamploy/issues"
   },
-  "homepage": "https://github.com/firstandthird/node-lambda#readme",
+  "homepage": "https://github.com/firstandthird/lamploy#readme",
   "dependencies": {
     "async": "^1.5.2",
     "aws-sdk": "^2.2.33",
@@ -41,8 +41,9 @@
     "yargs": "^3.32.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^5.0.0",
-    "eslint-config-firstandthird": "^1.1.0"
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
+    "eslint-config-firstandthird": "^1.1.0",
+    "eslint-plugin-react": "^4.1.0"
   }
 }
