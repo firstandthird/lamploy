@@ -4,10 +4,12 @@
 const path = require('path');
 
 const argv = require('yargs')
-  .boolean('browserify')
+  .boolean('skip-browserify')
   .boolean('skip-publish')
-  .alias('b', 'browserify')
+  .alias('sb', 'skip-browserify')
+  .alias('sp', 'skip-publish')
   .array('versions')
+  .alias('e', 'env-vars')
   .argv;
 
 const cwd = process.cwd();
