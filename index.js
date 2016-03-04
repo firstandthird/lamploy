@@ -7,10 +7,6 @@ var bootstrap = require('./lib/helpers/bootstrap');
 
 module.exports = function(cwd, modPath, opts, cb) {
 
-  if(!opts.log) {
-    opts.log = console.log;
-  }
-  
   async.waterfall([
     (done) => {
       const confData = lamConfig(cwd);   
