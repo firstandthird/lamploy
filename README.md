@@ -4,6 +4,8 @@ A CLI / library for working with AWS lambda. Allows you to process and deploy la
 
 ## Commands
 
+##### `deploy`
+
 ```
   $ node-lambda deploy [function dir glob]
 ```
@@ -26,6 +28,10 @@ __Options__
 
  `--handler-file [file]` Configures function to use a different handler file. Defaults to `index.js` and `index.handler`
 
+*****
+
+##### `list`
+
 ```
   $ node-lambda list
 ``` 
@@ -35,6 +41,9 @@ __Options__
 
  `--list-all` Shows all of the functions in the current region
 
+*****
+
+##### `list-aliases`
 
 ```
   $ node-lambda list-aliases [function dir glob]
