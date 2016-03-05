@@ -4,7 +4,6 @@ A CLI / library for working with AWS lambda. Allows you to process and deploy la
 
 ## Commands
 
-### `deploy`
 `node-lambda deploy [function dir glob]` - Deploys the given versions (aliases) to the functions in the glob by creating or updating them.
 
 > __Options__
@@ -19,6 +18,11 @@ A CLI / library for working with AWS lambda. Allows you to process and deploy la
 >  
 >  `--role [AWS Role]` Sets the role for the current set of functions being deployed
 
-`node-lambda list` - Shows all of the functions currently in AWS, filtered by the project name. To see all of the functions in that region, add `--list-all` option.
+`node-lambda list` - Shows all of the functions currently in AWS, filtered by the project name.
+
+> __Options__
+>
+> `--list-all` Shows all of the functions in the current region
+>
 
 `node-lambda list-aliases [function dir glob]` - lists all the aliases for each of the functions in the glob.
