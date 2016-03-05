@@ -12,11 +12,11 @@ const argv = require('yargs')
   .alias('e', 'env-vars')
   .argv;
 
-const cwd = process.cwd();
+argv._cwd = process.cwd();
 
-const lib = require('../');
+const lib = require('../lib/helpers/bootstrap');
 
-lib(cwd, '', argv, (err, result) => {
+lib(argv, (err, result) => {
   if(err) {
     return console.log(err);
   }
